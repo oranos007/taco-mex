@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: montserrat ;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+}
+/* header */
+header {
+    width: 100%;
+    padding: 30px 12%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+header .lg-nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+}
+nav ul li a {
+    color:#eeeeee;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+nav ul li .order {
+    background-color: #ff892e;
+    color:#eeeeee;
+    margin-left: 20px;
+}
+nav ul li a:active,
+nav ul li a:hover{
+    color:#eeeeee;
+    background-color: #ed812f;
+}
+header .logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+header .logo span{
+ color: #eeeeee;
+ font-size: 1.2em;
+ font-weight: 600;
+}
+header .logo span .m{
+ color: tomato;
+}
+header .logo span .e{
+ color: #ffffff;
+}
+header .logo span .x{
+ color: #2aaf2a;
+}
+header .logo svg{
+    width: 30px;
+    height: auto;
+}
+/* main */
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 150px;
+    margin-top: 50px;
+}
+main .img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+main .text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main .img img{
+    width: 500px;
+    height: auto;
+}
+
+
+
+main .text h1 {
+    font-size: 60px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  main .text p {
+    font-size: 12px;
+    color: #eeeeee;
+    margin-bottom: 40px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+  main .text .me {
+    color: tomato;
+  }
+  main .text .xic {
+    color: #ffffff;
+  }
+  main .text .an {
+    color: #2aaf2a;
+  }
+  main button{
+    padding: 10px 30px;
+    border: none;
+    background-color: #fb8a35;
+    border-radius: 20px;
+    color: #eeeeee;
+    font-weight: 500;
+    cursor: pointer;
+}
+main button:active,
+main button:hover{
+    background-color: #fb7f20;
+  }
+
+.close-button,
+.open-button,
+.sm-nav{
+    display: none;
+    
+}
+.close-button,
+.open-button{
+    width: 30px;
+    cursor: pointer;
+}
+.close-button path{
+    fill: #eeeeee;
+}
+
+.open-button path{
+   fill: #eeeeee;
+}
+/* responsive */
+@media (max-width:1200px){
+    main {
+        padding:0 50px;
+    margin-top: 50px;
+    }
+    main .text h1{
+        font-size: 50px;
+    }
+    main .img img{
+        width: 100%;
+    }
+}
+@media (max-width:1000px){
+    .lg-nav{
+        display: none;
+    }
+    .open-button{
+        display: flex;
+    }
+    header .logo span{
+        font-size: 1em;
+    }
+    .sm-nav{
+        display: none;
+        background-color: #502801c1;
+        backdrop-filter: blur(7px) brightness(0.8);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .sm-nav ul{
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .sm-nav ul li a{
+        color: #eeeeee;
+    }
+    .sm-nav .order{
+        margin-left: 0;
+        background-color: transparent;
+        border: 2px solid #ed812f;
+    }
+    .sm-nav .order:active,
+    .sm-nav .order:hover{background-color: #ed812f;
+    }
+    main .text p{
+     /* display: none; */
+    }
+    main .text h1{
+        font-size: 50px;
+    }
+    main .img img{
+       z-index: -1;
+    }
+}
+@media (max-width:700px){
+    main .text p{
+        /* display: none; */
+        width: 150%;
+       }
+       main .text h1{
+           width: 200%;
+       }
+    
+    main .img img{
+        opacity: 0.9;
+        filter: blur(5px) brightness(1.1);
+        width: 70%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+    }
+}
+
